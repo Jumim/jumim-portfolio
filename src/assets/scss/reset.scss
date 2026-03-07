@@ -103,3 +103,28 @@ select::-ms-expand {
 .react-datepicker-wrapper {
   width: 100%;
 }
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 10px;
+  }
+}
