@@ -1,2 +1,124 @@
 .main_page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+
+  .intro_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      min-height: 100dvh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: var.$color_dark;
+
+      > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 38px;
+      }
+
+      .name {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        p:first-child {
+          font-size: 1.4rem;
+          color: var.$color_text_secondary;
+        }
+
+        p:last-child {
+          font-size: 2.6rem;
+          font-weight: 500;
+          color: var.$color_text_primary;
+        }
+      }
+
+      .introduction {
+        font-size: 1.2rem;
+        color: var.$color_text_primary;
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        li {
+          font-size: 1.2rem;
+          color: var.$color_text_primary;
+
+          a {
+            cursor: pointer;
+          }
+        }
+
+        li:nth-child(2) {
+          a {
+            font-size: 1.2rem;
+            color: var.$color_text_primary;
+            box-shadow: 0 -1px 0 0 var.$color_text_primary inset;
+          }
+        }
+
+        .list {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_page {
+    .intro_section {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 55% 45%);
+
+      .image {
+        min-height: 55%;
+
+        img {
+          object-position: 50% 60%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main_page {
+    .intro_section {
+      .info {
+        > div {
+          gap: 12px;
+        }
+      }
+    }
+  }
 }
