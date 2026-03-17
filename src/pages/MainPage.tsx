@@ -2,9 +2,18 @@ import dayjs from 'dayjs'
 import { MarkGithubIcon } from '@primer/octicons-react'
 import { image } from '@assets/images'
 import styles from '@assets/scss/pages/MainPage.module.scss'
+import { useState } from 'react'
+
+type Skills = 'FrontEnd' | 'Database' | 'Etc'
 
 export const MainPage = () => {
+  const [skills, setSkills] = useState<Skills>('FrontEnd')
+
   const experience = dayjs().diff(dayjs('2020-08-01'), 'year')
+
+  const handleClickSkill = (skill: Skills) => {
+    setSkills(skill)
+  }
 
   return (
     <div className={styles.main_page}>
@@ -34,6 +43,23 @@ export const MainPage = () => {
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div className={styles.skills_section}>
+        <h1 className={styles.title}>Skills</h1>
+        <div className={styles.skills}>
+          <ul className={styles.skill_list}>
+            <li className={skills === 'FrontEnd' ? styles.active : ''} onClick={() => handleClickSkill('FrontEnd')}>
+              FrontEnd
+            </li>
+            <li className={skills === 'Database' ? styles.active : ''} onClick={() => handleClickSkill('Database')}>
+              Database
+            </li>
+            <li className={skills === 'Etc' ? styles.active : ''} onClick={() => handleClickSkill('Etc')}>
+              Etc
+            </li>
+          </ul>
+          <div className={styles.skill_content}>dds</div>
         </div>
       </div>
     </div>
