@@ -110,15 +110,52 @@
       .skill_list {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 20px;
+        width: max-content;
+
+        li {
+          width: fit-content;
+          font-size: 1.5rem;
+          color: var.$color_text_primary;
+          cursor: pointer;
+          transition: box-shadow 0.3s ease;
+
+          &.active {
+            box-shadow: 0 -2px 0 0 var.$color_text_primary inset;
+          }
+        }
+      }
+
+      .skill_content_list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
         li {
           font-size: 1.4rem;
           color: var.$color_text_primary;
-        }
-      }
 
-      .skill_content {
+          .skill_header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .skill_level {
+              position: relative;
+              width: 100px;
+              height: 8px;
+              background-color: var.$color_text_muted;
+              border-radius: 4px;
+              overflow: hidden;
+
+              span {
+                display: block;
+                height: 100%;
+                background-color: var.$color_text_primary;
+              }
+            }
+          }
+        }
       }
     }
   }

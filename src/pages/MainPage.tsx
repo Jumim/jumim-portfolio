@@ -9,6 +9,19 @@ type Skills = 'FrontEnd' | 'Database' | 'Etc'
 export const MainPage = () => {
   const [skills, setSkills] = useState<Skills>('FrontEnd')
 
+  const skillsData = {
+    FrontEnd: [
+      { name: 'React', icon: '', level: '5', content: '' },
+      { name: 'TypeScript', icon: '', level: '4', content: '' },
+      { name: 'JavaScript', icon: '', level: '5', content: '' },
+      { name: 'HTML', icon: '', level: '5', content: '' },
+      { name: 'SASS', icon: '', level: '4', content: '' },
+      { name: 'CSS', icon: '', level: '4', content: '' }
+    ],
+    Database: [{ name: 'MySQL', icon: '', level: '2', content: '' }],
+    Etc: [{ name: 'Git', icon: '', level: '4', content: '' }]
+  }
+
   const experience = dayjs().diff(dayjs('2020-08-01'), 'year')
 
   const handleClickSkill = (skill: Skills) => {
@@ -59,7 +72,20 @@ export const MainPage = () => {
               Etc
             </li>
           </ul>
-          <div className={styles.skill_content}>dds</div>
+          <ul className={styles.skill_content_list}>
+            {skillsData[skills].map(skill => (
+              <li key={skill.name}>
+                <div className={styles.skill_header}>
+                  <img src={skill.icon} alt={`${skill.name} icon`} />
+                  <p className={styles.skill_name}>{skill.name}</p>
+                  <p className={styles.skill_level}>
+                    <span style={{ width: `${(Number(skill.level) / 5) * 100}%` }}></span>
+                  </p>
+                </div>
+                <div className={styles.skill_content}>{skill.content}</div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
