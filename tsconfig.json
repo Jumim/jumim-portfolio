@@ -21,6 +21,8 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@components": ["src/components/index.ts"],
+      "@data/*": ["src/data/*"],
+      "@data": ["src/data/index.ts"],
       "@pages/*": ["src/pages/*"],
       "@pages": ["src/pages/index.ts"]
     }
