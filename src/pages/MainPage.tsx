@@ -1,26 +1,14 @@
+import { useState } from 'react'
 import dayjs from 'dayjs'
-import { MarkGithubIcon } from '@primer/octicons-react'
+import { IoLogoGithub } from 'react-icons/io'
+import { skillsData } from '@data'
 import { image } from '@assets/images'
 import styles from '@assets/scss/pages/MainPage.module.scss'
-import { useState } from 'react'
 
-type Skills = 'FrontEnd' | 'Database' | 'Etc'
+type Skills = 'FrontEnd' | 'BackEnd' | 'Etc'
 
 export const MainPage = () => {
   const [skills, setSkills] = useState<Skills>('FrontEnd')
-
-  const skillsData = {
-    FrontEnd: [
-      { name: 'React', icon: '', level: '5', content: '' },
-      { name: 'TypeScript', icon: '', level: '4', content: '' },
-      { name: 'JavaScript', icon: '', level: '5', content: '' },
-      { name: 'HTML', icon: '', level: '5', content: '' },
-      { name: 'SASS', icon: '', level: '4', content: '' },
-      { name: 'CSS', icon: '', level: '4', content: '' }
-    ],
-    Database: [{ name: 'MySQL', icon: '', level: '2', content: '' }],
-    Etc: [{ name: 'Git', icon: '', level: '4', content: '' }]
-  }
 
   const experience = dayjs().diff(dayjs('2020-08-01'), 'year')
 
@@ -31,10 +19,10 @@ export const MainPage = () => {
   return (
     <div className={styles.main_page}>
       <div className={styles.intro_section}>
-        <div className={styles.image}>
-          <img src={image.spaceImage} />
+        <div className={styles.intro_image}>
+          <img src={image.spaceImage} alt="intro image" />
         </div>
-        <div className={styles.info}>
+        <div className={styles.intro_info}>
           <div>
             <div className={styles.name}>
               <p>프론트엔드 개발자</p>
@@ -51,7 +39,7 @@ export const MainPage = () => {
               </li>
               <li className={styles.list}>
                 <a href="https://github.com/Jumim" target="_blank" rel="noopener noreferrer">
-                  <MarkGithubIcon fill="#fff" size={24} />
+                  <IoLogoGithub color="#fff" size={24} />
                 </a>
               </li>
             </ul>
@@ -65,8 +53,8 @@ export const MainPage = () => {
             <li className={skills === 'FrontEnd' ? styles.active : ''} onClick={() => handleClickSkill('FrontEnd')}>
               FrontEnd
             </li>
-            <li className={skills === 'Database' ? styles.active : ''} onClick={() => handleClickSkill('Database')}>
-              Database
+            <li className={skills === 'BackEnd' ? styles.active : ''} onClick={() => handleClickSkill('BackEnd')}>
+              BackEnd
             </li>
             <li className={skills === 'Etc' ? styles.active : ''} onClick={() => handleClickSkill('Etc')}>
               Etc
@@ -76,10 +64,10 @@ export const MainPage = () => {
             {skillsData[skills].map(skill => (
               <li key={skill.name}>
                 <div className={styles.skill_header}>
-                  <img src={skill.icon} alt={`${skill.name} icon`} />
+                  <div className={styles.skill_icon}>{skill.icon}</div>
                   <p className={styles.skill_name}>{skill.name}</p>
                   <p className={styles.skill_level}>
-                    <span style={{ width: `${(Number(skill.level) / 5) * 100}%` }}></span>
+                    <span style={{ width: `${(Number(skill.level) / 10) * 100}%` }}></span>
                   </p>
                 </div>
                 <div className={styles.skill_content}>{skill.content}</div>
