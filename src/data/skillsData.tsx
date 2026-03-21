@@ -1,7 +1,7 @@
 import { FaCss3, FaHtml5, FaNodeJs, FaReact, FaSass, FaVuejs } from 'react-icons/fa'
 import { BiLogoJavascript, BiLogoTypescript } from 'react-icons/bi'
 import { FaGitAlt } from 'react-icons/fa6'
-import { SiMysql } from 'react-icons/si'
+import { SiMysql, SiStorybook, SiVite } from 'react-icons/si'
 import { RiNextjsFill } from 'react-icons/ri'
 
 export const skillsData = {
@@ -35,6 +35,12 @@ export const skillsData = {
       icon: <BiLogoJavascript color="#F7DF1E" />,
       level: 8,
       content: 'JavaScript를 활용한 동적인 웹 기능 구현 경험이 있습니다.'
+    },
+    {
+      name: 'Storybook',
+      icon: <SiStorybook color="#FF4785" />,
+      level: 6,
+      content: 'Storybook을 사용하여 UI 컴포넌트 개발과 문서화 경험이 있습니다.'
     },
     {
       name: 'HTML',
@@ -75,6 +81,12 @@ export const skillsData = {
       icon: <FaGitAlt color="#F05032" />,
       level: 8,
       content: 'Git을 사용하여 버전 관리 및 협업 경험이 있습니다.'
+    },
+    {
+      name: 'Vite',
+      icon: <SiVite color="#646CFF" />,
+      level: 6,
+      content: 'Vite를 사용하여 빠른 개발 환경을 구축한 경험이 있습니다.'
     }
   ]
 }
