@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import dayjs from 'dayjs'
 import { IoIosArrowDown, IoLogoGithub } from 'react-icons/io'
-import { skillsData } from '@data'
+import { projectData, skillsData } from '@data'
 import { image } from '@assets/images'
 import styles from '@assets/scss/pages/MainPage.module.scss'
 
@@ -74,6 +74,31 @@ export const MainPage = () => {
               </li>
             ))}
           </ul>
+        </div>
+      </div>
+      <div className={styles.portfolio_section}>
+        <h1 className={styles.title}>Portfolio</h1>
+        <div className={styles.portfolio}>
+          {projectData.map(project => (
+            <a key={project.name} href={project.link} target="_blank" rel="noopener noreferrer" className={styles.project}>
+              <div className={styles.project_type}>{project.type}</div>
+              <div className={styles.project_info}>
+                <div className={styles.project_image}>
+                  <img src={project.image} alt={project.name} />
+                </div>
+                <h2 className={styles.project_name}>{project.name}</h2>
+                <p className={styles.project_period}>{project.period}</p>
+                <p className={styles.project_description}>{project.description}</p>
+                <ul className={styles.project_skills}>
+                  {project.skills.map(skill => (
+                    <li key={skill.name} className={styles.project_skill}>
+                      {skill.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
 
