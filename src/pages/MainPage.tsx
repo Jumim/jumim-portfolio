@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import dayjs from 'dayjs'
-import { IoLogoGithub } from 'react-icons/io'
+import { IoIosArrowDown, IoLogoGithub } from 'react-icons/io'
 import { skillsData } from '@data'
 import { image } from '@assets/images'
 import styles from '@assets/scss/pages/MainPage.module.scss'
@@ -74,6 +74,13 @@ export const MainPage = () => {
               </li>
             ))}
           </ul>
+        </div>
+      </div>
+
+      <div className={styles.scroll_down}>
+        <p className={styles.scroll_text}>Scroll Down</p>
+        <div className={styles.scroll_arrow}>
+          <IoIosArrowDown color="#fff" />
         </div>
       </div>
     </div>
