@@ -5,7 +5,7 @@ export const projectData = [
     period: '2026.01 ~ ',
     description: '프렌차이즈 관리 시스템',
     image: '',
-    link: 'https://www.fcs3.spge.kr/',
+    link: 'https://fcs3.spge.kr/',
     skills: [
       { name: 'React', role: 'front' },
       { name: 'TypeScript', role: 'front' },
