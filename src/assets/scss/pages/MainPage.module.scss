@@ -4,23 +4,25 @@
   height: 100%;
   font-size: 0;
 
-  > div {
-    background-color: var.$color_dark;
+  .main_content {
+    > div {
+      background-color: var.$color_dark;
 
-    &:not(:first-child, :last-child) {
-      padding: 5rem 3.75rem;
+      &:not(:first-child) {
+        padding: 5rem 3.75rem;
 
-      @media screen and (max-width: 768px) {
-        padding: 3.75rem 1.875rem;
+        @media screen and (max-width: 768px) {
+          padding: 3.75rem 1.875rem;
+        }
       }
     }
-  }
 
-  .title {
-    margin-bottom: 2.5rem;
-    font-size: 2.75rem;
-    font-weight: 700;
-    color: var.$color_primary;
+    .title {
+      margin-bottom: 2.5rem;
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: var.$color_primary;
+    }
   }
 
   .intro_section {
