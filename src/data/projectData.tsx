@@ -5,7 +5,7 @@ export const projectData = [
     period: '2026.01 ~ ',
     description: '프렌차이즈 관리 시스템',
     image: '',
-    link: 'https://www.fcs3.co.kr/',
+    link: 'https://www.fcs3.spge.kr/',
     skills: [
       { name: 'React', role: 'front' },
       { name: 'TypeScript', role: 'front' },
@@ -26,22 +26,21 @@ export const projectData = [
     skills: [
       { name: 'React', role: 'front' },
       { name: 'Next.js', role: 'front' },
-      { name: 'TypeScript', role: 'front' },
+      { name: 'JavaScript', role: 'front' },
       { name: 'Recoil', role: 'front' },
       { name: 'SCSS', role: 'front' }
     ]
   },
   {
     type: 'company',
-    name: '월카',
-    period: '2025.03 ~ 2025.08',
-    description: '월세 카드 결제 서비스',
+    name: '스폰지 적립 리뉴얼',
+    period: '2024.08 ~',
+    description: '스폰지 적립 서비스 리뉴얼',
     image: '',
-    link: 'https://www.monthcard.co.kr/',
+    link: 'https://ttobongee.spge.kr/ttobongee/stampcheck',
     skills: [
       { name: 'React', role: 'front' },
-      { name: 'Next.js', role: 'front' },
-      { name: 'TypeScript', role: 'front' },
+      { name: 'JavaScript', role: 'front' },
       { name: 'Recoil', role: 'front' },
       { name: 'SCSS', role: 'front' }
     ]
