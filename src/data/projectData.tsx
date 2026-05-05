@@ -1,10 +1,12 @@
+import images from '@assets/images'
+
 export const projectData = [
   {
     type: 'company',
     name: 'FCS',
     period: '2026.01 ~ ',
     description: '프렌차이즈 관리 시스템',
-    image: '',
+    image: images.fcsImage,
     link: 'https://fcs3.spge.kr/',
     skills: [
       { name: 'React', role: 'front' },
