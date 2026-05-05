@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import dayjs from 'dayjs'
 import { IoIosArrowDown, IoLogoGithub } from 'react-icons/io'
-import { projectData, skillsData } from '@data'
-import { image } from '@assets/images'
+import { projectData, skillsData, experienceData } from '@data'
+import images from '@assets/images'
 import styles from '@assets/scss/pages/MainPage.module.scss'
 
 type Skills = 'FrontEnd' | 'BackEnd' | 'Etc'
@@ -45,7 +45,7 @@ export const MainPage = () => {
       <div className={styles.main_content}>
         <div className={styles.intro_section}>
           <div className={styles.intro_image}>
-            <img src={image.spaceImage} alt="intro image" />
+            <img src={images.spaceImage} alt="intro image" />
           </div>
           <div className={styles.intro_info}>
             <div>
@@ -100,6 +100,24 @@ export const MainPage = () => {
               ))}
             </ul>
           </div>
+        </div>
+        <div className={styles.experience_section}>
+          <h1 className={styles.title}>Experience</h1>
+          <ul className={styles.experience_list}>
+            {experienceData.map((exp, index) => (
+              <li key={index} className={styles.experience_item}>
+                <div className={styles.experience_content}>
+                  <div className={styles.experience_header}>
+                    <p className={styles.experience_company}>{exp.company}</p>
+                    <p className={styles.experience_period}>{exp.period}</p>
+                  </div>
+                  <p className={styles.experience_position}>{exp.position}</p>
+                  <p className={styles.experience_description}>{exp.description}</p>
+                  {exp.reason && <p className={styles.experience_reason}>퇴직 사유: {exp.reason}</p>}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className={styles.portfolio_section}>
           <h1 className={styles.title}>Portfolio</h1>
