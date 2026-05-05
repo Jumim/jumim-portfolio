@@ -23,7 +23,7 @@ export const projectData = [
     name: '월카',
     period: '2025.03 ~ 2025.08',
     description: '월세 카드 결제 서비스',
-    image: '',
+    image: images.monthcardImage,
     link: 'https://www.monthcard.co.kr/',
     skills: [
       { name: 'React', role: 'front' },
@@ -38,7 +38,7 @@ export const projectData = [
     name: '스폰지 적립 리뉴얼',
     period: '2024.08 ~',
     description: '스폰지 적립 서비스 리뉴얼',
-    image: '',
+    image: images.stampImage,
     link: 'https://ttobongee.spge.kr/ttobongee/stampcheck',
     skills: [
       { name: 'React', role: 'front' },
