@@ -14,7 +14,7 @@ export const skillsData = {
     },
     {
       name: 'Next.js',
-      icon: <RiNextjsFill color="#61DAFB" />,
+      icon: <RiNextjsFill color="#000000" />,
       level: 6,
       content: 'Next.js를 활용하여 서버 사이드 렌더링과 정적 사이트 생성을 경험했습니다.'
     },
