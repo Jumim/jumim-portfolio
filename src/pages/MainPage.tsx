@@ -103,15 +103,30 @@ export const MainPage = () => {
         <div className={styles.experience_section}>
           <h1 className={styles.title}>Experience</h1>
           <ul className={styles.experience_list}>
-            {experienceData.map((exp, index) => (
+            {experienceData.map((experience, index) => (
               <li key={index} className={styles.experience_item}>
+                <div className={`${styles.experience_period} ${experience.current ? styles.current : ''}`}>{experience.period}</div>
                 <div className={styles.experience_content}>
-                  <div className={styles.experience_header}>
-                    <p className={styles.experience_company}>{exp.company}</p>
-                    <p className={styles.experience_period}>{exp.period}</p>
-                  </div>
-                  <p className={styles.experience_position}>{exp.position}</p>
-                  <p className={styles.experience_description}>{exp.description}</p>
+                  <p className={styles.experience_company}>{experience.company}</p>
+                  <p className={styles.experience_position}>{experience.position}</p>
+                  {experience.skills?.length > 0 && (
+                    <ul className={styles.experience_skills}>
+                      {experience.skills.map(name => (
+                        <li key={name} className={styles.experience_skill}>
+                          {name}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {experience.tasks?.length > 0 && (
+                    <div className={styles.experience_tasks}>
+                      <ul>
+                        {experience.tasks.map((task, i) => (
+                          <li key={i}>{task}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </li>
             ))}
