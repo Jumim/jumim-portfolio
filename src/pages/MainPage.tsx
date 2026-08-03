@@ -112,7 +112,6 @@ export const MainPage = () => {
                   </div>
                   <p className={styles.experience_position}>{exp.position}</p>
                   <p className={styles.experience_description}>{exp.description}</p>
-                  {exp.reason && <p className={styles.experience_reason}>퇴직 사유: {exp.reason}</p>}
                 </div>
               </li>
             ))}
