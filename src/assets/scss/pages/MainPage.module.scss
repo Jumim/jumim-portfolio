@@ -159,6 +159,8 @@
 
           &.active {
             border-color: var.$color_pink;
+            font-weight: 500;
+            color: var.$color_pink;
           }
         }
       }
