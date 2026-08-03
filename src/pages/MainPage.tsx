@@ -58,7 +58,6 @@ export const MainPage = () => {
                 <p>항상 성장하는 개발자가 되는 것을 목표로 하고 있습니다.</p>
               </div>
               <ul className={styles.contact}>
-                <li>010-5485-5996</li>
                 <li>
                   <a href="mailto:a25320@naver.com">a25320@naver.com</a>
                 </li>
