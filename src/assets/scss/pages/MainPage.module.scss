@@ -426,24 +426,23 @@
       padding: 0.125rem 0.5rem;
       border: 1px solid rgba(var.$color_dark_gray, 0.25);
       border-radius: 0.625rem;
-      background-color: rgba(var.$color_gray, 0.07);
       font-size: 0.75rem;
       font-weight: 500;
       color: var.$color_dark_gray;
 
       &[data-type='team'] {
         border-color: rgba(var.$color_pink, 0.28);
-        background-color: rgba(var.$color_pink, 0.12);
+        background-color: rgba(var.$color_pink, 1);
         color: var.$color_pink;
       }
       &[data-type='solo'] {
         border-color: rgba(var.$color_light_gray, 0.2);
-        background-color: rgba(var.$color_light_gray, 0.1);
+        background-color: rgba(var.$color_light_gray, 1);
         color: var.$color_light_gray;
       }
       &[data-type='company'] {
         border-color: rgba(var.$color_gray, 0.25);
-        background-color: rgba(var.$color_primary, 0.07);
+        background-color: rgba(var.$color_primary, 1);
         color: var.$color_gray;
       }
     }

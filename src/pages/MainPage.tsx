@@ -137,7 +137,9 @@ export const MainPage = () => {
           <div className={styles.portfolio}>
             {projectData.map(project => (
               <a key={project.name} href={project.link} target="_blank" rel="noopener noreferrer" className={styles.project}>
-                <div className={styles.project_type}>{project.type}</div>
+                <div className={styles.project_type} data-type={project.type}>
+                  {project.type}
+                </div>
                 <div className={styles.project_info}>
                   <div className={styles.project_image}>
                     <img src={project.image} alt={project.name} />
