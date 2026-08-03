@@ -64,7 +64,7 @@ export const MainPage = () => {
                 </li>
                 <li className={styles.list}>
                   <a href="https://github.com/Jumim" target="_blank" rel="noopener noreferrer">
-                    <IoLogoGithub color="#fff" size={24} />
+                    <IoLogoGithub color="#fff" size={28} />
                   </a>
                 </li>
               </ul>
